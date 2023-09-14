@@ -71,7 +71,8 @@ def iterate(rocket_path, rocket_design):
 
 
 
-iteration_history = {} # [{rocket_design: score}, ... ]
+rocket_scores = [] 
+rocket_designs = [] 
 rocket_design = ... # initial rocket design
 
 while true:
@@ -79,9 +80,10 @@ while true:
   rocket_design = iterate(rocket_path, rocket_design)
   score = score_rocket_path(rocket_path)
 
-  iteration_history.append([rocket_design, score])
+  rocket_scores.append(score)
+  rocket_designs.append(rocket_design)
  
-  graph(iteration_history.values())
+  graph(rocket_scores)
 
 ```
 
