@@ -23,22 +23,22 @@ REPEAT
 
 ```Python
 
-def iterate(rocket_path, rocket_design):
-  # depending on rocket_path
-  # change rocket_design
+def iterate(outcome, design):
+  # depending on outcome
+  # change design
 
   # could be manual
 
-  return new_rocket_design
+  return new_design
 
 
 
 
-rocket_design = ... # initial rocket design
+design = ... # initial rocket design
 
 while true:
-  rocket_path = simulate_rocket(rocket_design)
-  rocket_design = iterate(rocket_path, rocket_design)
+  outsome = simulate_rocket(design)
+  design = iterate(outcome, design)
 
 ```
 
@@ -83,8 +83,19 @@ while true:
   rocket_scores.append(score)
   rocket_designs.append(rocket_design)
  
-  graph(rocket_scores)
+  graph(rocket_scores, rocket_designs) 
 
+```
+
+
+
+In our case
+
+
+```Python
+def score_rocket_path(rocket_path):
+
+  return  rocket_path.height_in_feet - 30_000     # return required offset from target
 ```
 
 
