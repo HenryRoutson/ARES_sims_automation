@@ -18,6 +18,8 @@ REPEAT
 ```
 
 
+## Basic iterate 
+
 
 ```Python
 
@@ -37,6 +39,17 @@ while true:
   rocket_design = iterate(rocket_path, rocket_design)
 
 ```
+
+
+
+
+## + Store rocket designs and their associated score 
+## + JSON save and load data to avoid needing to keep laptop on
+
+
+
+
+
 
 
 
