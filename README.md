@@ -27,6 +27,8 @@ def iterate(rocket_path, rocket_design):
   # depending on rocket_path
   # change rocket_design
 
+  # could be manual
+
   return new_rocket_design
 
 
@@ -43,10 +45,53 @@ while true:
 
 
 
-## + Store rocket designs and their associated score 
-## + JSON save and load data to avoid needing to keep laptop on
+## + Store rocket designs and their associated score to graph iterate function accuracy
 
 
+
+
+```Python
+
+
+
+
+def score_rocket_path(rocket_path):
+  # calculate score
+
+  return score
+
+
+def iterate(rocket_path, rocket_design):
+  # depending on rocket_path
+  # change rocket_design
+
+  return new_rocket_design
+
+
+
+
+
+iteration_history = {} # [{rocket_design: score}, ... ]
+rocket_design = ... # initial rocket design
+
+while true:
+  rocket_path = simulate_rocket(rocket_design)
+  rocket_design = iterate(rocket_path, rocket_design)
+  score = score_rocket_path(rocket_path)
+
+  iteration_history.append([rocket_design, score])
+ 
+  graph(iteration_history.values())
+
+```
+
+
+
+
+
+## + JSON save and load data to avoid needing to keep device on
+
+## 
 
 
 
@@ -61,4 +106,12 @@ For our use case we will be using
   Rocketpy     for accurate rocket_path simulation
 ```
 
-This unfortunatly restricts us from using colab to avoid machine specific setup issues,
+Unfortunatly OpenRocket restricts us from using colab to avoid machine specific setup issues,
+
+
+
+
+
+
+
+# TODO get final hope
