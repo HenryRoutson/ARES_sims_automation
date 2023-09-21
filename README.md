@@ -6,6 +6,8 @@
 
 Specifically we need to automate optimising ballast (weight ditribution) in our rocket to reach 30k feet. But for the sake of other possible optimsation purposes, this will attempt to be generalised.
 
+TODO what else needs to be optimised
+
 # General process
 
 
@@ -95,7 +97,7 @@ In our case
 ```Python
 def score_rocket_path(rocket_path):
 
-  return  rocket_path.height_in_feet - 30_000     # return required offset from target
+  return  rocket_path.height_in_feet - 30_000     # return offset from target
 ```
 
 
@@ -103,6 +105,47 @@ def score_rocket_path(rocket_path):
 
 
 ## + JSON save and load data to avoid needing to keep device on
+
+
+```Python
+
+import json
+
+
+def score_rocket_path(rocket_path):
+  # calculate score
+
+  return score
+
+
+def iterate(rocket_path, rocket_design):
+  # depending on rocket_path
+  # change rocket_design
+
+  return new_rocket_design
+
+
+
+# default '[[], [], []]'
+
+(rocket_scores, rocket_designs, rocket_design) = json.loads('[[], [], []]')
+
+while true:
+  rocket_path = simulate_rocket(rocket_design)
+  rocket_design = iterate(rocket_path, rocket_design)
+  score = score_rocket_path(rocket_path)
+
+  rocket_scores.append(score)
+  rocket_designs.append(rocket_design)
+ 
+  graph(rocket_scores, rocket_designs) 
+
+print(json.dumps())  # just use strings, files are overkill
+
+
+```
+
+
 
 ## 
 
@@ -127,4 +170,10 @@ Unfortunatly OpenRocket restricts us from using colab to avoid machine specific 
 
 
 
-# TODO get final hope
+# Example rocket py script
+
+```Python
+
+
+
+```
