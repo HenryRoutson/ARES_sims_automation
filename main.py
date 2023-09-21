@@ -77,6 +77,7 @@ def graph():
 
   # Save the plot as an image (e.g., PNG format)
   plt.savefig('my_plot.png')
+  plt.close()
 
 
 
