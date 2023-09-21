@@ -1,0 +1,5 @@
+
+
+TODO
+Put everything onto colab
+Create function out of updated_final_hope
